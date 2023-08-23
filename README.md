@@ -23,6 +23,14 @@ php
 
 mysql 
 
+iniciar instala composer #####
+docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php82-composer:latest \
+    composer install --ignore-platform-reqs
+
 #### 1- copie e renomei o arquivo .env.example ##
 
 #### 2- subir banco de dados e gerar dados ######
